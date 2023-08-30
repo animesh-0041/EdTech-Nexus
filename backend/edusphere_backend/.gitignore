@@ -1,0 +1,28 @@
+# Ignore compiled Python bytecode
+__pycache__/
+
+# Ignore settings file with sensitive information
+settings.py
+
+# Ignore local development settings
+local_settings.py
+
+# Ignore static and media files
+/static/
+/media/
+
+# Ignore logs and temporary files
+/logs/
+*.log
+*.tmp
+
+# Ignore environment variables file
+.env
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore IDE-specific directories
+.vscode/
+.idea/
