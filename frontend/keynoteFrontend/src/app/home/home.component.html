@@ -1,0 +1,54 @@
+<div class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+      <h1 class="text-2xl font-semibold mb-4">User Registration</h1>
+      <form (submit)="submitForm()">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="w-full border p-2 rounded-md" [(ngModel)]="formData.name" required>
+          </div>
+          <div>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" class="w-full border p-2 rounded-md" [(ngModel)]="formData.gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="w-full border p-2 rounded-md" [(ngModel)]="formData.dob" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="w-full border p-2 rounded-md" [(ngModel)]="formData.email" required>
+          </div>
+          <div>
+            <label for="email">Password</label>
+            <input type="password" id="password" name="password" class="w-full border p-2 rounded-md" [(ngModel)]="formData.password" required>
+          </div>
+          <div>
+            <label for="contact_number">Contact Number</label>
+            <input type="text" id="contact_number" name="contact_number" class="w-full border p-2 rounded-md" [(ngModel)]="formData.contact_number" required>
+          </div>
+          <div>
+            <label for="user_type">User Type</label>
+            <select id="user_type" name="user_type" class="w-full border p-2 rounded-md" [(ngModel)]="formData.user_type" required>
+              <option value="student">Student</option>
+              <option value="instructor">Instructor</option>
+            </select>
+          </div>
+          <div>
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" class="w-full border p-2 rounded-md" [(ngModel)]="formData.department" required>
+          </div>
+        </div>
+  
+        <div class="mt-6">
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md w-full">Register</button>
+        </div>
+      </form>
+      <p *ngIf="registrationSuccess" class="text-green-500 mt-4">Registration Successful!</p>
+    </div>
+  </div>
+  
