@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { CourseComponent } from './course/course.component';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 
 
@@ -15,6 +18,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
+    CourseComponent,
+   
     
   ],
   imports: [
@@ -22,6 +27,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
   ],
   providers: [
      
