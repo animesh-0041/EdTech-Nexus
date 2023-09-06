@@ -3,7 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CourseComponent } from './course/course.component';
-import { CourseListComponent } from './course-list/course-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AuthGuard } from './auth.guard';
+import { StudentComponent } from './student/student.component';
+import { EnrolledComponent } from './enrolled/enrolled.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AssignmentComponent } from './assignment/assignment.component';
 
 
 const routes: Routes = [
@@ -17,8 +22,31 @@ const routes: Routes = [
   },
   {
     component:CourseComponent,
-    path:'course'
+    path:'instructor/course',
+    canActivate:[AuthGuard]
   },
+  {
+    component:StudentComponent,
+    path:'student/course',
+    canActivate:[AuthGuard]
+  },
+  {
+    component:EnrolledComponent,
+    path:'student/enrolled',
+    canActivate:[AuthGuard]
+  },
+ 
+  {
+    component:ProfileComponent,
+    path:'profile',
+    canActivate:[AuthGuard]
+  },
+  {
+    component:AssignmentComponent,
+    path:'instructor/assignment',
+    canActivate:[AuthGuard]
+  }
+ 
  
 
 ];

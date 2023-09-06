@@ -26,8 +26,24 @@ export class LoginComponent {
           localStorage.setItem('user', JSON.stringify(matchedUser));
           this.errorMessage = '';
           this.successMessage = 'Login successful!';
-          this.router.navigate(['course']);
-        } else {
+          console.log(matchedUser);
+          
+          // this.router.navigate(['course']);
+
+
+
+          // Check the user's role and navigate accordingly
+          if (matchedUser.user_type === 'instructor') {
+            this.router.navigate(['instructor/course']);
+          } else if (matchedUser.user_type === 'student') {
+            this.router.navigate(['student/course']);
+          }
+        }
+        
+        
+        
+        
+        else {
           this.errorMessage = 'Wrong credentials';
           this.successMessage = '';
         }

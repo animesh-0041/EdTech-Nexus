@@ -61,9 +61,12 @@
           "configurations": {
             "production": {
               "browserTarget": "keynoteFrontend:build:production"
+              
             },
             "development": {
               "browserTarget": "keynoteFrontend:build:development"
+             
+              
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +74,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "keynoteFrontend:build"
+            "browserTarget": "keynoteFrontend:build",
+            "proxyConfig": "src/proxy.conf.json"
+           
           }
         },
         "test": {
@@ -87,7 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           }

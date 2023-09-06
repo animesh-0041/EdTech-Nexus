@@ -1,0 +1,41 @@
+<app-student-navbar></app-student-navbar>
+<!-- student.component.html -->
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-20">
+    <div *ngFor="let course of courses" class="bg-white rounded-lg shadow-lg p-4">
+      <!-- Add an image based on department -->
+      <img
+        src="https://images.pexels.com/photos/7129700/pexels-photo-7129700.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        alt="{{ course.department }}"
+        class="w-full h-auto"
+      />
+  
+      <!-- Make the course name heading bold and center -->
+      <h2 class="text-lg font-bold text-center my-2">{{ course.course_name }}</h2>
+  
+      <!-- Display Department and Credits -->
+      <div class="my-2">
+        <strong>Department:</strong> {{ course.department }} <br />
+        <strong>Credits:</strong> {{ course.credits }} Credits
+      </div>
+  
+      <!-- Display Description -->
+      <div>
+        <strong>Description:</strong> {{ course.description }} <br />
+      </div>
+  
+      <!-- Display Instructor -->
+      <p class="text-gray-600">Instructor: {{ course.instructor_name }}</p>
+  
+      <!-- Add Enroll Now button -->
+      <button
+        (click)="enroll(course)"
+        class="bg-green-600 text-white px-3 py-1 rounded-md mt-4 block mx-auto"
+      >
+        Enroll Now
+      </button>
+    </div>
+  </div>
+  
+  

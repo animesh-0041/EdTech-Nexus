@@ -8,8 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { CourseComponent } from './course/course.component';
-import { CourseListComponent } from './course-list/course-list.component';
-import { CourseCardComponent } from './course-card/course-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { StudentComponent } from './student/student.component';
+import { StudentNavbarComponent } from './student-navbar/student-navbar.component';
+import { EnrolledComponent } from './enrolled/enrolled.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AssignmentComponent } from './assignment/assignment.component';
+
+
 
 
 
@@ -19,6 +26,14 @@ import { CourseCardComponent } from './course-card/course-card.component';
     HomeComponent,
     LoginComponent,
     CourseComponent,
+    NavbarComponent,
+    StudentComponent,
+    StudentNavbarComponent,
+    EnrolledComponent,
+    ProfileComponent,
+    AssignmentComponent,
+   
+ 
    
     
   ],

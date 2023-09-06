@@ -15,9 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from courses import views
+from student_courses import views
+from api import views
+from assignment import views
+
+
+
 
 urlpatterns = [
+    path('api/courses/', include('courses.urls')),
     path('admin/', admin.site.urls),
-     path('api/', include('api.urls')),
-      path('api/courses/', include('courses.urls'))
+    path('api/', include('api.urls')),
+    path('api/student/course/', include('student_courses.urls')),
+    # path('api/profile/',views.get_profile)
+    path('api/assignments/', include('assignment.urls'))
+
+      
 ]

@@ -1,0 +1,30 @@
+
+<app-navbar></app-navbar>
+<div class="container mx-auto mt-20">
+    <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+      <div class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Add Assignment</h2>
+        <div class="mb-4">
+          <label for="assignmentTitle" class="block text-gray-700">Title:</label>
+          <input type="text" id="assignmentTitle" class="w-full p-2 border rounded-md" [(ngModel)]="assignmentTitle">
+        </div>
+        <div class="mb-4">
+          <label for="assignmentDescription" class="block text-gray-700">Description:</label>
+          <textarea id="assignmentDescription" class="w-full p-2 border rounded-md" [(ngModel)]="assignmentDescription"></textarea>
+        </div>
+        <div class="mb-4">
+          <label for="assignmentDeadline" class="block text-gray-700">Deadline:</label>
+          <input type="date" id="assignmentDeadline" class="w-full p-2 border rounded-md" [(ngModel)]="assignmentDeadline">
+        </div>
+        <div class="mb-4">
+          <label for="assignmentCourse" class="block text-gray-700">Select a Course:</label>
+          <select id="assignmentCourse" class="w-full p-2 border rounded-md" [(ngModel)]="selectedCourse">
+            <option value="">Select a Course</option>
+            <option *ngFor="let course of courses"  [value]="course">{{ course.course_name }}</option>
+          </select>
+        </div>
+        <button class="bg-teal-500 text-white px-4 py-2 rounded-md w-full hover:bg-blue-600" (click)="addAssignment()">Add Assignment</button>
+      </div>
+    </div>
+  </div>
+  
